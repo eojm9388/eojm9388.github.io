@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+}
+
+/*
+==============================================
+common
+==============================================
+*/
+
+.bold-text {
+  font-family: "bitbit";
+  font-size: 30px;
+}
+
+.md {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box-row {
+  display: flex;
+  flex-direction: row;
+}
+.box-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}
+
+/*
+==============================================
+side-bar
+==============================================
+*/
+
+.side-bar {
+  width: 15vw;
+  height: 100vh;
+  border-right: 1px solid gray;
+
+  position: relative;
+}
+
+.profile-back {
+  width: 100%;
+}
+
+.profile {
+  border: 3px solid black;
+  border-radius: 20px;
+  position: absolute;
+  left: 3.5vw;
+  top: 30px;
+}
+.profile-name {
+  width: 100%;
+  margin-top: 73px;
+}
+.profile-icon {
+  margin-left: 8px;
+}
+
+.rank {
+  margin-top: 5px;
+  font-family: "bitbit";
+  font-size: 20px;
+  color: rgb(250, 250, 34);
+}
+
+/*
+==============================================
+main
+==============================================
+*/
+main {
+  width: 85vw;
+}
+
+.main-img {
+  width: 100%;
+}
+/*
+==============================================
+font-style
+==============================================
+*/
+
+@font-face {
+  font-family: "bitbit";
+  src: url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff"),
+    url("//cdn.df.nexon.com/img/common/font/DNFBitBit-Regular.woff2");
+}
