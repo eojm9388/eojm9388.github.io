@@ -5,7 +5,7 @@
 }
 
 body {
-  display: flex;
+  /* display: flex; */
 }
 
 /*
@@ -52,11 +52,16 @@ side-bar
 */
 
 .side-bar {
-  width: 15vw;
+  width: 250px;
   height: 100vh;
   border-right: 1px solid gray;
-
-  position: relative;
+  /* background-color: blue; */
+  background-color: #f2f2f2;
+  position: absolute;
+  transition: all 1s ease-in-out;
+}
+.none {
+  transform: translateX(-250px);
 }
 
 .profile-back {
@@ -67,7 +72,7 @@ side-bar
   border: 3px solid black;
   border-radius: 20px;
   position: absolute;
-  left: 3.5vw;
+  left: 62px;
   top: 30px;
 }
 .profile-name {
@@ -79,10 +84,54 @@ side-bar
 }
 
 .rank {
+  width: 80px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
   margin-top: 5px;
+  padding: 5px 5px;
   font-family: "bitbit";
   font-size: 20px;
   color: rgb(250, 250, 34);
+
+  background: rgb(252, 162, 29);
+  border: none;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.rank:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 10px;
+  background-color: #eaf818;
+  background-image: linear-gradient(315deg, #eaf818 0%, #f6fc9c 74%);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5);
+  /* 7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); */
+  transition: all 0.3s ease;
+}
+.rank:hover {
+  color: #000;
+}
+.rank:hover:after {
+  top: auto;
+  bottom: 0;
+  height: 100%;
+}
+.rank:active {
+  top: 2px;
 }
 
 /*
@@ -91,7 +140,8 @@ main
 ==============================================
 */
 main {
-  width: 85vw;
+  /* width: 85vw; */
+  width: 500px;
 }
 
 .main-img {
