@@ -61,10 +61,25 @@ side-bar
   /* background-color: blue; */
   background-color: #f2f2f2;
   position: absolute;
-  transition: all 1s ease-in-out;
+  left: -250px;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
 }
-.none {
-  transform: translateX(-250px);
+
+.side-bar-back {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  opacity: 0.1;
+}
+
+.open {
+  transform: translateX(250px);
+}
+
+.close {
+  display: none;
 }
 
 .profile-back {
@@ -143,12 +158,17 @@ main
 ==============================================
 */
 main {
-  /* width: 85vw; */
-  width: 500px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .main-img {
   width: 100%;
+}
+.top {
+  width: 500px;
+  height: 200px;
+  background-color: blue;
 }
 /*
 ==============================================
